@@ -1,6 +1,6 @@
 # CocosJumpBall
 
-> [name=eliza.chan]  [time=Thr, Apr 8, 2021 ]
+> [Hsu-En.Chan]  [Thr, Apr 8, 2021 ]
 * Develop Environment: Cocos creator
 * Develop Language: TypeScript
 
