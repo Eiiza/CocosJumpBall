@@ -6,7 +6,7 @@
 
 You should download [cocos creator](https://www.cocos.com/en/creator/download) to run this project.
 
-## scence
+### SCENCE
 ![image](https://user-images.githubusercontent.com/32055893/113962537-7574ce80-985a-11eb-9804-ae2689cbbe0f.png)
 1. Score: Caculate your score.
 2. Main Sprite: A ball, which jump infinitely, will go forward until falling down.
