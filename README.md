@@ -9,7 +9,7 @@
 You should download [cocos creator](https://www.cocos.com/en/creator/download) to run this project.
 
 ### SCENCE
-![image](https://user-images.githubusercontent.com/32055893/113962537-7574ce80-985a-11eb-9804-ae2689cbbe0f.png)
+![image](https://user-images.githubusercontent.com/32055893/113987193-b4b61600-9880-11eb-96e7-4f327de36bc8.png)
 1. Score: Caculate your score.
-2. Main Sprite: A ball, which jump infinitely, will go forward until falling down.
+2. Main Sprite: A Sheep, which jump infinitely, will go forward until falling down.
 3. Block: Appear with random size. The main sprite get score, when it crosses a block.
