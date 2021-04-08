@@ -1,7 +1,9 @@
 # CocosJumpBall
 
 > Hsu-En.Chan  Thr, Apr 8, 2021
-* Develop Environment: Cocos creator
+### DEV
+![image](https://user-images.githubusercontent.com/32055893/113974424-7d3f6d80-9870-11eb-8523-d826c61d982e.png)
+* Develop Environment: Cocos creator, VSCode
 * Develop Language: TypeScript
 
 You should download [cocos creator](https://www.cocos.com/en/creator/download) to run this project.
