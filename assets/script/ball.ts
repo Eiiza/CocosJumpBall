@@ -3,9 +3,6 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ball extends cc.Component {
 
-    @property(cc.Label)
-    label: cc.Label = null;
-
     initV : number= 0;
 
     // LIFE-CYCLE CALLBACKS:
@@ -16,7 +13,20 @@ export default class ball extends cc.Component {
 
     // start () {}
 
-    // update (dt) {}
+    update (dt) {
+      let ballY = this.node.getComponent(cc.RigidBody).linearVelocity.y
+      var self = this;
+      if (ballY && ballY >0) (
+        cc.resources.load('sheepJumpUp', cc.SpriteFrame, function(err, assets) {
+          self.node.getComponent(cc.Sprite).spriteFrame = <cc.SpriteFrame> assets
+        })
+      ) 
+      else {
+        cc.resources.load('sheepJumpDown', cc.SpriteFrame, function(err, assets) {
+          self.node.getComponent(cc.Sprite).spriteFrame = <cc.SpriteFrame> assets
+        })
+      }
+    }
 
     /**
      * 碰撞回調: 需要先在rigidbody中開啟碰撞監聽，才會有相應的回調產生

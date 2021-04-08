@@ -10,6 +10,9 @@ export default class game extends cc.Component {
     @property(cc.Node)
     blockAreaNode : cc.Node = null;
 
+    @property(cc.Node)
+    mask : cc.Node = null;
+
     @property(cc.Prefab)
     block : cc.Prefab = null;
 
@@ -31,6 +34,8 @@ export default class game extends cc.Component {
       this.node.on('touchstart', this.boast, this)
       this.gameStart = 0
       this.score = 0
+
+      this.mask.active = true
 
       this.initBlock()
     }
@@ -60,6 +65,7 @@ export default class game extends cc.Component {
         // 若球掉出去，重新載入遊戲
           cc.director.loadScene('game')
       }
+
     }
 
     /**
@@ -80,7 +86,7 @@ export default class game extends cc.Component {
 
         this.blockAreaNode.addChild(this.blockNode)
         this.blockNodeArr.push(this.blockNode)
-        this.lastBlockPosX += 200
+        this.lastBlockPosX += 300
       }
     }
 
@@ -90,10 +96,13 @@ export default class game extends cc.Component {
     initPhysics() {
       let manager = cc.director.getPhysicsManager()
 
-      manager.enabled = true
-      manager.debugDrawFlags = 1
+      //FOR DEBUG
+      // manager.enabled = true
+      // manager.debugDrawFlags = 1
+
       // 打開物理引擎
-      manager.enabled = true; 
+      manager.enabled = true
+
       // 小球的重力，讓掉下去的速度快一點
       manager.gravity = cc.v2(0, -2400)
     }
@@ -106,6 +115,8 @@ export default class game extends cc.Component {
         let rigid = this.ballNode.getComponent(cc.RigidBody)
         rigid.linearVelocity = cc.v2(0, -1200)
         this.gameStart = 1
+        this.mask.active = false
+
       }  
     }
     /**
